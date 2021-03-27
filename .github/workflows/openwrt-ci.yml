@@ -96,7 +96,8 @@ jobs:
           EOF
           # 固件压缩:
           cat >> .config <<EOF
-          CONFIG_TARGET_IMAGES_GZIP=y
+          CONFIG_TARGET_ROOTFS_SQUASHFS=y
+          CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
           EOF
           # 编译UEFI固件:
           # cat >> .config <<EOF
