@@ -88,9 +88,9 @@ jobs:
           
           # 编译xiaomi3固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_ramips=y
-          CONFIG_TARGET_ramips_mt7620=y
-          CONFIG_TARGET_ramips_mt7620_DEVICE_xiaomi_miwifi-r3=y
+          CONFIG_TARGET_armvirt=y
+          CONFIG_TARGET_armvirt_32=y
+          CONFIG_TARGET_armvirt_32_Default=y
           EOF
           # 固件压缩:
           cat >> .config <<EOF
