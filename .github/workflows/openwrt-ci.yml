@@ -86,11 +86,11 @@ jobs:
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
           
-          # 编译xiaomi3固件:
+          # 编译xiaomi-mini固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_armvirt=y
-          CONFIG_TARGET_armvirt_32=y
-          CONFIG_TARGET_armvirt_32_Default=y
+          CONFIG_TARGET_ramips=y
+          CONFIG_TARGET_ramips_mt7620=y
+          CONFIG_TARGET_ramips_mt7620_DEVICE_xiaomi_miwifi-mini=y
           EOF
           # 固件压缩:
           cat >> .config <<EOF
