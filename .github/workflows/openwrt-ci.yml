@@ -46,6 +46,13 @@ jobs:
           sudo -E apt-get clean
 
           df -h
+          
+      - name: 自定义插件
+        run: |
+          cd package
+          mkdir passwall
+          cd passwall
+          git clone https://github.com/xiaorouji/openwrt-passwall    
 
       - name: Update feeds
         run: |
