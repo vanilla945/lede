@@ -58,7 +58,7 @@ jobs:
           rm -f ./.config*
           [ -f files ] && mv files openwrt/files
           [ -f $CONFIG_FILE ] && cp -f $CONFIG_FILE openwrt/.config
-         
+          make defconfig
 
       - name: Download packages
         run: make download -j16
