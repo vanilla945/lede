@@ -56,7 +56,7 @@ jobs:
       - name: Generate configuration file
         run: |
           rm -f ./.config*
-          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+          [ -f $CONFIG_FILE ] && cp -f $CONFIG_FILE openwrt/.config
          
 
       - name: Download packages
